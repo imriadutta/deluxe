@@ -40,7 +40,7 @@ Download the zip file of the project or clone it & then run the ```python manage
   git clone https://github.com/imriadutta/deluxe.git
 ```
 
-You may not able to run the program successfully. That is because of you need to add database or make some changes.
+You may not able to run the program successfully. That is because you need to add database or make some changes.
 
 ## Snapshots of the Site
 
