@@ -1,1 +1,1 @@
-"# deluxe" 
+# deluxe
