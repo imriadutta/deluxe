@@ -1,9 +1,7 @@
 
-<h1 align="center">
 ![2023-02-24](https://user-images.githubusercontent.com/74056908/221020653-a3403d73-e84c-4729-b213-a67b8441fbac.png)
-</h1>
 
-<h1 align="center"> The Deluxe Hotels and Resorts  </h1>
+<h1 align="center">The Deluxe Hotels and Resorts</h1>
 
 ## Pages
 
