@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="![2023-02-24](https://user-images.githubusercontent.com/74056908/221014537-e263ad5e-ac8d-4adb-ae03-6ab87273a928.png)" alt="" width="350px"/>
+![2023-02-24](https://user-images.githubusercontent.com/74056908/221020653-a3403d73-e84c-4729-b213-a67b8441fbac.png)
 </p>
 
 <h1 align="center"> The Deluxe Hotels and Resorts  </h1>
@@ -44,7 +44,7 @@ Download the zip file of the project or clone it & then run the ```python manage
 
 You may not able to run the program successfully. That is because of you need to add database or make some changes.
 
-## Snapshots of the Website
+## Snapshots of the Site
 
 1. Offer section
 
