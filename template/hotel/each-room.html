@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include "hotel/includer.html" %}
+    <title> Room no. {{ room.room_no }} | Deluxe </title>
+</head>
+
+<body class="sub_page">
+
+    <div class="hero_area">
+        {% include "hotel/header.html" %}
+    </div>
+
+    <!-- book section -->
+    <section class="book_section layout_padding">
+        <div class="container">
+            <div class="heading_container">
+                <h2>
+                    {{ room.title }} <small>Details</small>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><b>Features:</b> {{ room.features }}</p>
+                    <p>
+                        <b>Description:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, id.
+                        Excepturi veritatis vitae deserunt modi adipisci enim consequuntur unde alias exercitationem
+                        facilis non repellat tempora sed fugiat quia obcaecati nobis amet voluptas, quam omnis molestiae
+                        maiores, accusantium ullam. Quidem nisi perspiciatis nobis officia recusandae ipsum delectus
+                        minus explicabo! Nisi tempora illum laudantium possimus rerum explicabo eos sequi et nesciunt
+                        nemo. Recusandae possimus laudantium incidunt ullam eveniet amet adipisci nemo rem, et ut enim
+                        consectetur dolorem id tenetur aperiam! Ducimus saepe quas et animi qui praesentium itaque sequi
+                        fugiat nulla quam natus, minus facere enim eum iure in. Dolor, iure voluptates.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="form_container">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div>
+                                <select class="form-control nice-select wide" name="f_room_no" required>
+                                    {% if not rooms_matched %}
+                                    <option disabled selected>
+                                        No room available
+                                    </option>
+                                    {% else %}
+                                    <option disabled selected>
+                                        Select a room
+                                    </option>
+                                    {% for rm in rooms_matched %}
+                                    {% if not rm.is_reserved %}
+                                    <option value="{{ rm.room_no }}">
+                                        Room no. {{ rm.room_no }}
+                                    </option>
+                                    {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                </select>
+                            </div>
+                            <div>
+                                <p>Booking from</p>
+                                <input type="date" class="form-control" name="f_start_date" required>
+                            </div>
+                            <div>
+                                <p>Booking to</p>
+                                <input type="date" class="form-control" name="f_end_date" required>
+                            </div>
+                            <div class="btn_box">
+                                <button type="submit">
+                                    Book Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end book section -->
+
+    {% include "hotel/footer.html" %}
+
+</body>
+
+</html>

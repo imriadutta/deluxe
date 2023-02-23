@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "hotel/includer.html" %}
+    <title>Login | Deluxe</title>
+</head>
+
+<body class="sub_page">
+
+    <div class="hero_area">
+        {% include "hotel/header.html" %}
+    </div>
+
+    <div class="form">
+        <form method="post">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input type="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+            </div>
+            <div class="action">
+                <button type="submit" class="btn-active">Login</button>
+            </div>
+        </form>
+    </div>
+
+    {% include "hotel/footer.html" %}
+
+</body>
+
+</html>

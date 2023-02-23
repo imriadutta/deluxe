@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include "admin/includer.html" %}
+	<title>Reservations Chart | Deluxe</title>
+</head>
+
+<body>
+	<div class="app">
+		{% include "admin/header.html" %}
+		<div class="app-body">
+			{% include "admin/footer.html" %}
+			<div>
+				<canvas id="myChart"></canvas>
+			</div>
+		</div>
+	</div>
+
+	<script src='https://unpkg.com/phosphor-icons'></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+	{% block scripts %}
+	<script>
+		const ctx = document.getElementById('myChart');
+		new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: [
+					{% for label in labels %}
+					'{{ label }}',
+					{% endfor %}
+				],
+				datasets: [{
+					label: '# of Reservations',
+					data: {{ data }},
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					y: {
+						beginAtZero: true
+					}
+				}
+			}
+		});
+	</script>
+	{% endblock %}
+
+</body>
+
+</html>

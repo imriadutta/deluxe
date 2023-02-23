@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% include "hotel/includer.html" %}
+  <title> Booking | Deluxe </title>
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    {% include "hotel/header.html" %}
+  </div>
+
+  <!-- book section -->
+  <section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Book A Room
+        </h2>
+      </div>
+      <!-- <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="static/images/about-img.jpeg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="" method="post">
+              <div>
+                <select class="form-control nice-select wide">
+                  <option value="" disabled selected>
+                    Select room type
+                  </option>
+                  <option value="Single Room">
+                    Single Room
+                  </option>
+                  <option value="Double Suite">
+                    Double Suite
+                  </option>
+                  <option value="Deluxe Room">
+                    Deluxe Room
+                  </option>
+                </select>
+              </div>
+              <div>
+                <input type="text" class="form-control" placeholder="First Name" disabled />
+              </div>
+              <div>
+                <input type="date" class="form-control" placeholder="From">
+              </div>
+              <div>
+                <input type="date" class="form-control" placeholder="To">
+              </div>
+              <div class="btn_box">
+                <button>
+                  Book Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <!-- end book section -->
+
+  {% include "hotel/footer.html" %}
+
+</body>
+
+</html>

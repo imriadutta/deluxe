@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% include "hotel/includer.html" %}
+  <title> Home | Deluxe </title>
+</head>
+
+<body>
+
+  <div class="hero_area">
+    {% include "hotel/header.html" %}
+
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Deluxe Hotel & Resort
+                    </h1>
+                    <p>
+                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam
+                      quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos
+                      nihil ducimus libero ipsam.
+                    </p>
+                    <div class="btn-box">
+                      <a href="/booking" class="btn1">
+                        Book Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      The Grande Dame
+                    </h1>
+                    <p>
+                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam
+                      quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos
+                      nihil ducimus libero ipsam.
+                    </p>
+                    <div class="btn-box">
+                      <a href="/booking" class="btn1">
+                        Book Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      The Urban Escape
+                    </h1>
+                    <p>
+                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam
+                      quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos
+                      nihil ducimus libero ipsam.
+                    </p>
+                    <div class="btn-box">
+                      <a href="/booking" class="btn1">
+                        Book Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- offer section -->
+  <section class="offer_section layout_padding-bottom">
+    <div class="offer_container">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-6  ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/o1.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Swimming Pool
+                </h5>
+                <h6>
+                  <span>15%</span> Off
+                </h6>
+                <a href="/booking">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="static/images/o2.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Pub and Cocktail
+                </h5>
+                <h6>
+                  <span>20%</span> Off
+                </h6>
+                <a href="/booking">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end offer section -->
+
+  <!-- room section -->
+  <section class="room_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Rooms
+        </h2>
+      </div>
+
+      <div class="filters-content">
+        <div class="row grid">
+          {% for room in rooms %}
+          <a href="/room{{ room.room_no }}">
+            <div class="col-sm-6 col-lg-4 all pizza">
+              <div class="box">
+                <div>
+                  <div class="img-box">
+                    <img src="media/{{ room.image }}" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                      {{ room.title }}
+                    </h5>
+                    <p>
+                      {{ room.features }}
+                    </p>
+                    <div class="options">
+                      <h6>
+                        &#8377; {{ room.price }}
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="/rooms">
+          View More
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- end room section -->
+
+  <!-- about section -->
+  <section class="about_section layout_padding" id="about-part">
+    <div class="container  ">
+
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="static/images/about-img.jpeg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                We Are Deluxe
+              </h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, rem harum esse, a delectus accusantium,
+              labore quo fuga exercitationem mollitia perspiciatis aspernatur. Quam odit ex ullam eligendi porro facilis
+              ducimus nobis omnis quia. Earum, magni harum officiis perferendis voluptatem velit error dolorum,
+              exercitationem culpa expedita quam quidem laudantium quos et.
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+
+  <!-- contact section -->
+  <section class="book_section layout_padding" id="contact-part">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Contact
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="">
+              <div>
+                <input type="text" class="form-control" placeholder="Your Name" />
+              </div>
+              <div>
+                <input type="email" class="form-control" placeholder="Your Email" />
+              </div>
+              <div>
+                <input type="text" class="form-control" placeholder="Message" />
+              </div>
+              <div class="btn_box">
+                <button>
+                  Contact us
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container ">
+            <div id="googleMap"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  {% include "hotel/footer.html" %}
+
+</body>
+
+</html>
