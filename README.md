@@ -29,6 +29,7 @@
 - HTML
 - CSS
 - JavaScript
+- Chart.js
 - Python (Django)
 - PostgreSQL
 
